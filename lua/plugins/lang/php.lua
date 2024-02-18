@@ -39,16 +39,26 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
+      php_cs_fixer = {
+        command = "vendor/bin/php-cs-fixer",
+        args = { "--no-interaction", "fix", "$FILENAME" },
+        env = {
+          PHP_CS_FIXER_IGNORE_ENV = "1",
+        },
+      },
       formatters_by_ft = {
-        php = { "pint" },
+        php = { "php_cs_fixer", "pint" },
       },
     },
   },
   {
     "mfussenegger/nvim-lint",
     opts = {
+      phpmd = {
+        args = { "-", "json", "phpmd.xml" },
+      },
       linters_by_ft = {
-        php = { "phpmd", "phpstan" },
+        -- php = { "phpmd", "phpstan" },
       },
     },
   },

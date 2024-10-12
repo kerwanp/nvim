@@ -1,3 +1,4 @@
+vim.keymap.set("n", ";", ":")
 --- Unamp x for bufremove
 -- TODO: Remap thoses
 vim.keymap.del("n", "<leader>xl")

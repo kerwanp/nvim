@@ -6,3 +6,4 @@ vim.filetype.add({
     mdx = "mdx",
   },
 })
+vim.filetype.add({ extension = { edge = "html" } })

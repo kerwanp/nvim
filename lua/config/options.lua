@@ -7,3 +7,5 @@ vim.filetype.add({
   },
 })
 vim.filetype.add({ extension = { edge = "html" } })
+
+vim.g.lazyvim_php_lsp = "intelephense"
